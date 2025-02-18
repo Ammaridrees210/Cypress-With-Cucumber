@@ -18,4 +18,4 @@ Feature: CheckMate Game
   Scenario: User should not be able to move onto an opponent's piece
     Given I visit the CheckerGame page
     When I attempt to move a piece onto an opponent's piece
-    Then the move should be display message
+    Then the opponent's move attempt should be display message for next move

@@ -19,7 +19,7 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://www.gamesforthebrain.com/game/checkers',
-    specPattern: "cypress/e2e/*.feature",
+    specPattern: "cypress/e2e/features/*.feature",
     setupNodeEvents,
   },
 });

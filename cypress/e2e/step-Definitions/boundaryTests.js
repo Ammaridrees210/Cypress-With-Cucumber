@@ -1,12 +1,8 @@
-import { Given, When, Then } from  "@badeball/cypress-cucumber-preprocessor";
+import { When, Then } from  "@badeball/cypress-cucumber-preprocessor";
 
-import NegativeCases  from "../../support/pages/checkerGameNeagtiveCases/negativeCasePO";
+import NegativeCases  from "../../support/pages/boundaryTestAnalysis/boundaryTestsCasePO";
 
 const checkerCases = new NegativeCases();
-
-// Given('I visit the CheckerGame page2', () => {
-//         cy.visit("/");
-// });
     
 When('I check the URL of the game', () => {
 checkerCases.ensureCheckerGameUrl();
@@ -36,7 +32,7 @@ When('I attempt to move a piece onto an opponent\'s piece', () => {
 checkerCases.ensureMoveOnOpponentPiece();
 });
 
-Then('the move should be display message', () => {
+Then('the opponent\'s move attempt should be display message for next move', () => {
 cy.get('p#message').should('contain', 'Click on your orange piece, then click where you want to move it.');
 });
     
