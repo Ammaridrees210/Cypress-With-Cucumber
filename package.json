@@ -1,0 +1,18 @@
+{
+    "scripts": {
+        "cy:run": "cypress run",
+        "cy:open": "npx cypress open",
+        "cy:run:headed": "npx cypress run --headed",
+        "cy:run:Browser": "npx cypress run --browser chrome"
+    },
+    "devDependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+        "cypress": "^13.14.2"
+    },
+    "cypress-cucumber-preprocessor": {
+        "stepDefinitions": [
+          "cypress/e2e/**/*.js"
+        ]
+      }
+}
